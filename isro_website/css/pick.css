@@ -1,0 +1,239 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: lightblue;
+}
+
+nav{
+	 width: 100%;
+	 height: 15vh;
+	 background-color: dodgerblue;
+}
+
+.hamburger{
+	float: right;
+	height: 15vh;
+	padding: 0em 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hamburger .checkbtn{
+	font-size: 2em;
+	color: orangered;
+	display: none;
+}
+
+#check{
+	display: none;
+}
+
+ul{
+	float: right;
+}
+ul li{
+	display: inline-block;
+	line-height: 15vh;
+	padding: 0 0.5em;
+}
+
+ul li a{
+	padding: 1em 1.5em;
+	text-decoration: none;
+	color: orangered;
+	background-color: none
+	border-radius: 3%;
+	border: 0px solid transparent;
+}
+
+ul li a:hover{
+	background-color: orangered;
+	transition: 0.5s ease;
+	color: dodgerblue;
+}
+
+ul li a.active{
+	background-color: orangered;
+	color: dodgerblue;
+}
+label.logo{
+	line-height: 15vh;
+	font-size: 2em;
+	color: orangered;
+	padding: 0 1.5em;
+}
+
+main{
+	background-color: none;
+	width: 100%;
+	margin: auto;
+}
+
+main .main{
+	background-color:  none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .main h1{
+	padding: 0em;
+	margin: 0.5em;
+	font-size: 2.5rem;
+}
+main .top{
+	background-color: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .block{
+	margin: 1em;
+	padding: 1em;
+	flex: 1;
+	background-color: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: none;
+}
+main .top .left{
+	float: left;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+main .top .right{
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+main .image{
+	width: 100%;
+	margin: 0.5em;
+	background-color: none;
+	text-align: center;
+}
+
+main img{
+	width: 55%;
+	height: auto;
+	transition: all;
+	transition-duration: 1s;
+	margin: auto;
+}
+
+main img:hover{
+	transform: scale(1.1,1.1);
+}
+
+main .title{
+	width: 90%;
+	margin: all;
+	border-bottom: 3px solid orangered;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2em;
+}
+
+
+main .first{
+	margin-top: 0.5em;
+}
+main .bottom{
+	background-color: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+main .bottom .subtitle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: none;
+}
+footer{
+
+}
+
+footer .sub_footer{
+	width: 90%;
+	margin: auto;
+	background-color: dodgerblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+footer .sub_footer .top{
+	background-color: lightblue;
+	display: flex;
+}
+
+@media(max-width: 890px){
+	main{
+		padding-top: 15vh;
+	}
+
+	nav{
+		position: fixed;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: -100%;
+		top: 15vh;
+		text-align: center;
+		background-color: rgba(0,0,0,0.8);
+		transition: 1s ease;
+	}
+
+	ul li{
+		display: block;
+	}
+
+	ul li a{
+		color: dodgerblue;	
+		transition: 0.5s ease;
+		border: 2px solid transparent;
+		background-color: transparent;
+	}
+
+	ul li a:hover{
+		border-bottom: 2px solid dodgerblue;
+		font-size: 1.5em;
+		background-color: transparent;
+	}
+
+	ul li a.active{
+		background-color: transparent;
+		border-bottom: 2px solid dodgerblue;
+	}
+	.hamburger .checkbtn{
+		display: block;
+	}
+	img{
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+
+
+}

@@ -1,0 +1,253 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: lightblue;
+}
+
+nav{
+	 width: 100%;
+	 height: 15vh;
+	 background-color: dodgerblue;
+	 position: fixed;
+}
+
+.hamburger{
+	float: right;
+	height: 15vh;
+	padding: 0em 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hamburger .checkbtn{
+	font-size: 2em;
+	color: orangered;
+	display: none;
+}
+
+#check{
+	display: none;
+}
+
+.links{
+	float: right;
+}
+.links li{
+	display: inline-block;
+	line-height: 15vh;
+	padding: 0 0.5em;
+}
+
+.links li a{
+	padding: 1em 1.5em;
+	text-decoration: none;
+	color: orangered;
+	background-color: none
+	border-radius: 3%;
+	border: 0px solid transparent;
+}
+
+.links li a:hover{
+	background-color: orangered;
+	transition: 0.5s ease;
+	color: dodgerblue;
+}
+
+.links li a.active{
+	background-color: orangered;
+	color: dodgerblue;
+}
+label.logo{
+	line-height: 15vh;
+	font-size: 2em;
+	color: orangered;
+	padding: 0 1.5em;
+}
+
+main{
+	width: 90%;
+	height: 100vh;
+	background-color: lightblue;
+	padding-top: 15vh;
+	margin: auto;
+}
+
+main .title{
+	width: 90%;
+	background-color: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 3px solid orangered;
+	padding: 1em;
+	margin: auto;
+}
+
+main .title h1{
+	color: black;
+}
+
+.image{
+	background-color: lightblue;
+	padding: 1em 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+img{
+	width: 50%;
+	height: auto;
+	transition-property: all;
+	transition-duration: 1s;
+	min-width: 30vh;
+}
+
+img:hover{
+	transform: scale(1.1,1.1);
+}
+.left{
+	background-color: lightblue;
+}
+
+.all{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.rocket{
+	list-style: none;
+	margin: 1em;
+}
+
+.rocket li{
+	display: inline-block;
+	margin: 0.5em 0em;
+}
+
+.rocket li a{
+	text-decoration: none;
+	color: orangered;
+	padding: 0.75em 1em;
+	font-size: 1em;
+}
+
+.rocket li a:hover{
+	border-bottom: 2px solid orangered;
+}
+
+footer{
+	width: 100%;
+	background-color: dodgerblue;
+	height: auto;
+}
+
+footer .sub_footer{
+	width: 90%;
+	margin: auto;
+	background-color: dodgerblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+footer .sub_footer .top{
+	background-color: lightblue;
+	display: flex;
+}
+
+@media(min-width: 891px){
+
+	.all{
+		flex-direction: row;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: lightblue;
+		height: 70%;
+	}
+
+	.left{
+		background-color: lightblue;
+		
+	}
+
+	.rocket{
+		text-align: center;
+	}
+	.rocket li{
+		display: block;
+		padding: 1em 1em;
+	}
+
+	.rocket li a{
+		font-size: 1.25em;
+		padding: 1em 2em;
+	}
+
+	.right .image{
+		background-color: lightblue;
+	}
+}
+
+
+@media(max-width: 890px){
+	main{
+		padding-top: 15vh;
+	}
+	.links{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: -100%;
+		top: 15vh;
+		text-align: center;
+		background-color: rgba(0,0,0,0.8);
+		transition: 1s ease;
+		z-index: 3;
+	}
+
+	.links li{
+		display: block;
+		z-index: 3;
+	}
+
+	.links li a{
+		color: dodgerblue;	
+		transition: 0.5s ease;
+		border: 2px solid transparent;
+		background-color: transparent;
+	}
+
+	.links li a:hover{
+		border-bottom: 2px solid dodgerblue;
+		font-size: 1.5em;
+		background-color: transparent;
+	}
+
+	.links li a.active{
+		background-color: transparent;
+		border-bottom: 2px solid dodgerblue;
+	}
+	.hamburger .checkbtn{
+		display: block;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+
+	#check:checked ~ img{
+		visibility: hidden;
+	}
+
+	.rocket li a{
+		font-size: 1em;
+	}
+
+}

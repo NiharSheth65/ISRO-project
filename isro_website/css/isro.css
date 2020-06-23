@@ -1,0 +1,196 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+	background-color: lightblue;
+}
+
+nav{
+	 width: 100%;
+	 height: 15vh;
+	 background-color: dodgerblue;
+	 position: fixed;
+}
+
+.hamburger{
+	float: right;
+	height: 15vh;
+	padding: 0em 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hamburger .checkbtn{
+	font-size: 2em;
+	color: orangered;
+	display: none;
+}
+
+#check{
+	display: none;
+}
+
+ul{
+	float: right;
+}
+ul li{
+	display: inline-block;
+	line-height: 15vh;
+	padding: 0 0.5em;
+}
+
+ul li a{
+	padding: 1em 1.5em;
+	text-decoration: none;
+	color: orangered;
+	background-color: none
+	border-radius: 3%;
+	border: 0px solid transparent;
+}
+
+ul li a:hover{
+	background-color: orangered;
+	transition: 0.5s ease;
+	color: dodgerblue;
+}
+
+ul li a.active{
+	background-color: orangered;
+	color: dodgerblue;
+}
+label.logo{
+	line-height: 15vh;
+	font-size: 2em;
+	color: orangered;
+	padding: 0 1.5em;
+}
+
+main{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	padding-top: 15vh;
+}
+
+.all{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; 
+}
+.image{
+	background-color: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50vh;
+	height: auto;
+	padding: 1em;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+.title{
+	padding: 1em;
+	background-color: none;
+	text-align: center;
+}
+
+
+.title h2{
+	color: orangered;
+	font-size: 2em;
+}
+
+.button{
+	display: flex;
+}
+
+.button button{
+	padding: 0.5em 1em;
+	width: 20vh;
+	height: 9vh;
+	margin: 1em;
+	min-width: 15vh;
+}
+
+.button .Learn{
+	background-color: dodgerblue;
+	border: 1px solid transparent;
+	transition-property: all;
+	transition-duration: 0.5s;
+}
+
+.button .Learn:hover{
+	background-color: orangered;
+	transform: scale(1.1,1.1);
+}
+
+.button .Real{
+	border:2px solid dodgerblue;
+	background-color: transparent;
+	transition-property: all;
+	transition-duration: 0.5s;
+}
+
+.button .Real:hover{
+	border-color: orangered;
+	transform: scale(1.1,1.1);
+}
+
+@media(max-width: 890px){
+	main{
+		padding-top: 15vh;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: -100%;
+		top: 15vh;
+		text-align: center;
+		background-color: rgba(0,0,0,0.8);
+		transition: 1s ease;
+	}
+
+	ul li{
+		display: block;
+	}
+
+	ul li a{
+		color: dodgerblue;	
+		transition: 0.5s ease;
+		border: 2px solid transparent;
+		background-color: transparent;
+	}
+
+	ul li a:hover{
+		border-bottom: 2px solid dodgerblue;
+		font-size: 1.5em;
+		background-color: transparent;
+	}
+
+	ul li a.active{
+		background-color: transparent;
+		border-bottom: 2px solid dodgerblue;
+	}
+	.hamburger .checkbtn{
+		display: block;
+	}
+	img{
+		z-index: -1;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+}
